@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background: url('{{ url_for('static', filename='hospital.jpg') }}') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Thanks! Your info was submitted.</h2>
+        <p><strong>First Name:</strong> {{ first_name }}</p>
+        <p><strong>Last Name:</strong> {{ last_name }}</p>
+        <p><strong>Date of Birth:</strong> {{ dob }}</p>
+        <p><strong>Therapist:</strong> {{ therapist }}</p>
+        <a href="{{ url_for('index') }}">Submit Another</a>
+    </div>
+</body>
+</html>
